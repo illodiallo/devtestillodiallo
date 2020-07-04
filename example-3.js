@@ -29,3 +29,14 @@ console.log('---- EXAMPLE 3 --- ', 'Put here your function');
 // un booléen validant que tous les noms des "company" et les attributs "firstName"
 // et "lastName" des "users" sont en majuscules. Vous devez tester le fonctionnement
 // de cette fonction en important la fonction créée pour "example-1.js".
+
+
+// eslint-disable-next-line no-unused-vars
+function CompanyUsersWithCar(companies, hasCar) {
+  return companies
+      .map((company) => {
+        company.users = company.users.filter((user) => user.car === hasCar);
+        company.usersLength = company.users.length;
+        return company;
+      });
+}

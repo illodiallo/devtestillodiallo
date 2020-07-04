@@ -36,3 +36,14 @@ const example = {
 };
 
 console.log(example);
+
+// eslint-disable-next-line no-unused-vars
+function newObject(companies) {
+  const object = {};
+  companies.map((user) => user.users.map((person) => {
+    object[person.lastName + person.firstName + person.age] = person.car;
+  }));
+  return object;
+}
+
+

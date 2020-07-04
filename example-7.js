@@ -99,8 +99,21 @@ console.log('---- EXAMPLE 7 part 9 --- ', 'Put here your function');
 // Partie 1 : Créer une fonction prenant en paramètre un "id" de "company" et
 // retournant le nom de cette "company".
 
+// eslint-disable-next-line no-unused-vars
+function getCompany(id) {
+  const companyFind = companies.find((company) => company.id = id);
+  return companyFind.name;
+}
+
+
 // Partie 2 : Créer une fonction prenant en paramètre un "id" de "company" et
 // supprimant la "company" de la liste.
+
+// eslint-disable-next-line no-unused-vars
+function deleteCompany(id) {
+  const companyToFind = companies.find((company) => company.id === id);
+  return companies.filter((company) => company !== companyToFind);
+}
 
 // Partie 3 : Créer une fonction prenant en paramètre un "id" de "company" et
 // permettant de faire un PATCH (comme avec un appel HTTP) sur tous les

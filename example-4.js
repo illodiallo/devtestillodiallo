@@ -30,3 +30,19 @@ console.log('---- EXAMPLE 4 --- ', 'Put here your function');
 // doit avoir un nouvel attribut "company" ayant pour valeur le nom de la "company"
 // à laquelle il appartient. Les "users" doivent être triés en fonction de leur
 // âge (du plus vieux au plus jeune).
+
+// eslint-disable-next-line no-unused-vars
+function allUserWithNameOfCompany(companies) {
+  return companies
+      .reduce((acc, company) => {
+        return acc.concat(company.users
+            .map((user) => {
+              user.companie = company.name;
+              return user;
+            }));
+      }
+      , [])
+      .sort((a, b) => a.age > b.age ? -1 :1);
+}
+
+

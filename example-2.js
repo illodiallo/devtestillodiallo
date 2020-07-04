@@ -30,3 +30,13 @@ console.log('---- EXAMPLE 2 --- ', 'Put here your function');
 // "users" dont la valeur de l'attribut "car" est égal au paramètre de la
 // fonction "hasCar" et l'attribut "usersLength" doit renseigner le nombre de
 // "users" correspondant au paramètre "hasCar".
+
+// eslint-disable-next-line no-unused-vars
+function keepOnlyCars(companies, hasCar) {
+  return companies.map((company) => {
+    company.users = company.users.filter((user) => user.car === hasCar);
+    company.usersLength = company.users.length;
+    return company;
+  });
+}
+
